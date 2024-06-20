@@ -17,9 +17,9 @@ html {
   @include respond(tab-port) {
     font-size: 50%;
   }
-  @include respond(phone) {
-    font-size: 45%;
-  }
+  // @include respond(phone) {
+  //   font-size: 45%;
+  // }
 
   @include respond(big-desktop) {
     font-size: 75%;
@@ -33,4 +33,8 @@ body {
   color: $color-grey-dark;
   padding: 3rem;
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
