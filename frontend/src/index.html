@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -65,7 +65,9 @@
           <span class="heading-primary--main">Outdoors</span>
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
-        <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated"
+          >Discover our tours</a
+        >
       </div>
     </header>
     <main>
@@ -408,11 +410,23 @@
 
     <footer class="footer">
       <div class="footer__logo-box u-margin-bottom-big">
-        <img
-          src="/frontend/public/img/logo-green-2x.png"
-          alt="Full logo"
-          class="footer__logo"
-        />
+        <!-- Art direction & Density switching -->
+        <picture class="footer__logo">
+          <source
+            srcset="
+              /frontend/public/img/logo-green-small-1x.png 1x,
+              /frontend/public/img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="
+              /frontend/public/img/logo-green-1x.png 1x,
+              /frontend/public/img/logo-green-2x.png 2x
+            "
+            alt="Full logo"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -462,7 +476,9 @@
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>
-          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Start booking now
+          </h2>
           <h3 class="heading-tertiary u-margin-bottom-small">
             Important &ndash; Please read these terms before booking!
           </h3>
